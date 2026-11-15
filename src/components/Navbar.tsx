@@ -48,9 +48,17 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
       >
         <a
           href="#top"
-          className="font-display shrink-0 px-2 text-sm font-semibold tracking-tight text-[var(--fg)] sm:text-base"
+          className="font-display flex shrink-0 items-center gap-2 px-2 text-sm font-semibold tracking-tight text-[var(--fg)] sm:text-base"
           onClick={close}
         >
+          <img
+            src="/images/logo.png"
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 rounded-full"
+            aria-hidden
+          />
           {profile.firstName}
           <span className="text-[var(--accent)]">.</span>
         </a>
