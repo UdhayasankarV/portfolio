@@ -262,10 +262,10 @@ export const projects: ProjectItem[] = [
     id: "monitoring-app",
     name: "Monitoring Application",
     summary:
-      "Monitoring application built with ASP.NET Core Web API, MVC, and SQL Server for operational visibility and backend workflows.",
+      "Internal monitoring system that watches company applications, servers, MT5, and integrations, then alerts the right team when something goes down or fails.",
     problem:
-      "Needed a .NET-based application to monitor and manage operational data through API and MVC layers backed by SQL Server.",
-    role: "Software Engineer — API and application development",
+      "When application servers, MetaTrader 5, or other integrations failed, teams needed a clear way to detect issues early and notify the people responsible.",
+    role: "Software Engineer — designed and built the application",
     tech: [
       "ASP.NET Core Web API 10",
       "ASP.NET Core MVC",
@@ -274,10 +274,10 @@ export const projects: ProjectItem[] = [
       ".NET",
     ],
     features: [
-      "ASP.NET Core Web API 10 backend services",
-      "MVC application layer for UI workflows",
-      "SQL Server data storage and queries",
-      "Integrated API and MVC architecture",
+      "Monitors company applications and related services",
+      "Detects server downtime and MT5 / integration failures",
+      "Captures issue details for troubleshooting",
+      "Shares alerts with the concerned team",
     ],
   },
   {
