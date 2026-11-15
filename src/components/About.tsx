@@ -14,6 +14,18 @@ export function About() {
             <p>
               Based in <span className="text-[var(--fg)]">{profile.location}</span>.
             </p>
+            <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 sm:p-5">
+              <p className="mono-label mb-2">Education</p>
+              <p className="font-display text-base font-semibold text-[var(--fg)]">
+                {about.education.degree}
+              </p>
+              <p className="mt-1 text-sm text-[var(--muted)]">
+                {about.education.school}
+              </p>
+              <p className="mt-1 font-mono text-xs text-[var(--accent)]">
+                {about.education.duration}
+              </p>
+            </div>
           </div>
         </Reveal>
 

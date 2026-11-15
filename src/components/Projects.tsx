@@ -118,7 +118,7 @@ export function Projects() {
       id="projects"
       eyebrow="04 — Selected work"
       title="Featured projects"
-      description="Case-study style cards. Replace the placeholders with real projects when ready."
+      description="Selected applications and APIs from professional work and personal development."
     >
       <div className="grid gap-5 lg:grid-cols-2">
         {projects.map((project, index) => (

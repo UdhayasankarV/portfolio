@@ -8,7 +8,7 @@ export function Experience() {
       id="experience"
       eyebrow="03 — Work"
       title="Experience"
-      description="A concise timeline of roles. Placeholder entries are marked until you fill in real company details."
+      description="Roles and responsibilities from professional experience."
     >
       <ol className="relative space-y-8 border-l border-[color-mix(in_oklab,var(--accent)_35%,var(--border))] pl-6 sm:pl-8">
         {experience.map((item, index) => (

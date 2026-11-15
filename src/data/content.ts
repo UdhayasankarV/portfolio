@@ -2,8 +2,8 @@
  * ============================================================
  * EDITABLE SITE CONTENT — update this file to change the site
  * ============================================================
- * Placeholders are marked as [ADD: ...]. Fill them, commit, push;
- * Vercel redeploys automatically.
+ * Source of truth for copy. After Vercel deploy, set canonicalUrl
+ * (and matching SEO files) to your live domain.
  */
 
 export type NavItem = {
@@ -52,7 +52,7 @@ export type SocialLink = {
 export const siteMeta = {
   title: "Udhayasankar V — Software Engineer",
   description:
-    "Software Engineer based in Salem, India. Builds applications with C# and ASP.NET Core Web API, works with SQL Server and PostgreSQL, and uses AI-assisted development with Cursor.",
+    "Software Engineer with experience in C#, ASP.NET Core, REST APIs, PostgreSQL, SQL Server, and MySQL. Based in Salem, India. Currently building trading technology components with MetaTrader 5 integration.",
   canonicalUrl: "https://[ADD: your-vercel-or-custom-domain]",
   ogImage: "/images/profile.jpg",
   author: "Udhayasankar V",
@@ -64,7 +64,9 @@ export const profile = {
   firstName: "Udhayasankar",
   role: "Software Engineer",
   location: "Salem, India",
-  email: "udhayasanklar2002@gmail.com",
+  email: "udhayasankar2002@gmail.com",
+  phone: "+91 84890 03502",
+  phoneHref: "tel:+918489003502",
   githubUrl: "https://github.com/UdhayasankarV",
   linkedinUrl: "https://www.linkedin.com/in/udhayasankar-v-11a126211/",
   resumePath: "/resume.pdf",
@@ -73,7 +75,7 @@ export const profile = {
   /** Set to true only when you want the status chip shown in the hero */
   availableForOpportunities: false,
   shortIntro:
-    "I build and maintain applications with C# and ASP.NET Core Web API, design and integrate SQL Server and PostgreSQL databases, and ship clear REST APIs. I use AI-assisted development every day — especially Cursor — with deliberate prompts and careful review.",
+    "Software Engineer with experience in C#, .NET, and ASP.NET Core Web API. I design databases, build REST APIs, and integrate systems — including MetaTrader 5 trading components. I use Cursor daily with deliberate prompts and careful review.",
 };
 
 export const navItems: NavItem[] = [
@@ -88,14 +90,20 @@ export const navItems: NavItem[] = [
 export const about = {
   heading: "About",
   body: [
-    "Software Engineer with hands-on experience building and maintaining applications with C# and ASP.NET Core Web API. I work with SQL Server and PostgreSQL for database design, development and integration, build REST APIs, and enjoy debugging and solving practical problems.",
+    "Software Engineer with experience in C#, .NET, ASP.NET Core, ASP.NET Core Web API, Entity Framework Core, Dapper, PostgreSQL, MySQL, and SQL Server. I work on RESTful API development, database design and query optimization, JWT authentication, business-rule implementation, third-party integrations, asynchronous programming, production support, and performance troubleshooting.",
+    "I currently develop trading technology components integrated with MetaTrader 5 (MT5), including Dynamic Leverage and Swap Engine modules. Earlier work covered dealer and order management, SAP integration, online auction systems, real-time bidding, payment workflows, and tailoring applications.",
     "I use AI-assisted development in my daily workflow, with deliberate prompt design and advanced use of Cursor AI for coding, debugging, code analysis and productivity.",
   ],
+  education: {
+    degree: "Bachelor of Engineering (Electronics & Communication)",
+    school: "Knowledge Institute of Technology, Salem",
+    duration: "2019 – 2023",
+  },
   highlights: [
-    "C# & ASP.NET Core Web API",
-    "SQL Server & PostgreSQL",
-    "REST API design",
-    "AI-assisted development (Cursor)",
+    "C# · .NET 8 · ASP.NET Core",
+    "PostgreSQL · SQL Server · MySQL",
+    "JWT · REST APIs · Swagger",
+    "MT5 trading integrations",
   ],
 };
 
@@ -106,8 +114,17 @@ export const skills: SkillCategory[] = [
     icon: "code",
     skills: [
       "C#",
+      "SQL",
+      "JavaScript",
+      "C",
+      ".NET 8",
+      "ASP.NET Core",
       "ASP.NET Core Web API",
-      "[ADD: JavaScript/TypeScript, React if applicable]",
+      "ASP.NET Core MVC",
+      "Entity Framework Core",
+      "Dapper",
+      "LINQ",
+      "React JS",
     ],
   },
   {
@@ -115,30 +132,43 @@ export const skills: SkillCategory[] = [
     title: "Databases",
     icon: "database",
     skills: [
-      "SQL Server",
       "PostgreSQL",
-      "Schema design",
-      "Queries & integration",
+      "SQL Server",
+      "MySQL",
+      "Database design",
+      "SQL query optimization",
+      "Migrations",
     ],
   },
   {
     id: "api",
-    title: "API & backend",
+    title: "API, security & backend",
     icon: "api",
     skills: [
-      "REST API design & development",
-      "Authentication [ADD if applicable]",
+      "REST APIs",
+      "Async/Await",
+      "JWT",
+      "Role-based authorization",
       "Swagger / OpenAPI",
+      "API integration",
+      "Validation",
+      "Exception handling",
+      "Postman",
     ],
   },
   {
     id: "practices",
-    title: "Engineering practices",
+    title: "Architecture & practices",
     icon: "wrench",
     skills: [
-      "Problem-solving",
-      "Debugging",
-      "Code analysis",
+      "OOP",
+      "SOLID",
+      "Dependency Injection",
+      "Design patterns",
+      "Repository pattern",
+      "Modular architecture",
+      "Microservices",
+      "Agile / Scrum",
       "Git & GitHub",
     ],
   },
@@ -155,63 +185,118 @@ export const skills: SkillCategory[] = [
   },
   {
     id: "tools",
-    title: "Tools",
+    title: "Integrations & tools",
     icon: "tools",
     skills: [
-      "Git",
-      "GitHub",
-      "Visual Studio / VS Code",
-      "Postman",
-      "Swagger",
-      "[ADD others]",
+      "MetaTrader 5 (MT5)",
+      "SAP integration",
+      "QuickBooks integration",
+      "SignalR",
+      "IIS",
+      "GitLab",
+      "Visual Studio",
+      "VS Code",
+      "pgAdmin",
+      "SSMS",
+      "DBeaver",
     ],
   },
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    id: "placeholder-1",
-    company: "[ADD: Company name]",
-    role: "[ADD: Role title]",
-    duration: "[ADD: Start – End, e.g. Jan 2023 – Present]",
-    location: "[ADD: City, Country]",
+    id: "aetram",
+    company: "Aetram Infotech Pvt Ltd",
+    role: "Software Engineer",
+    duration: "Aug 2026 – Present",
+    location: "Chennai, India",
     bullets: [
-      "[ADD: Factual responsibility or outcome — what you built or owned]",
-      "[ADD: Factual responsibility or outcome — APIs, databases, features]",
-      "[ADD: Factual responsibility or outcome — collaboration or process]",
+      "Develop backend components for Aetram Trades, a trading technology platform integrated with MetaTrader 5 (MT5).",
+      "Built Dynamic Leverage functionality to evaluate open positions, apply account leverage rules, and support margin-related updates through MT5 integration.",
+      "Built Swap Engine logic using symbol, trade direction, swap rate, holding duration, free-holding days, and chargeable days.",
+      "Implemented position-event processing, validation, diagnostics, and detailed logging for trading calculations and troubleshooting.",
+      "Worked on performance optimization for MT5 leverage and margin update processing and validated multiple-symbol and multiple-position scenarios.",
     ],
-    isPlaceholder: true,
+  },
+  {
+    id: "hakuna",
+    company: "Hakuna Matata Solutions Pvt Ltd",
+    role: "Software Engineer",
+    duration: "June 2023 – July 2026",
+    location: "Chennai, India",
+    bullets: [
+      "Developed and maintained RESTful APIs using ASP.NET Core for multiple applications, including an internal survey tool, tailoring system, online auction platform, and dealer management system.",
+      "Optimized SQL queries and database access in MySQL and PostgreSQL using Dapper and Entity Framework Core, improving application performance and stability.",
+      "Implemented JWT authentication, role-based authorization, real-time bidding, dynamic watchlists, and payment processing modules for secure transaction workflows.",
+      "Collaborated with QA teams for end-to-end testing, prepared technical specifications, and reviewed validation scenarios for feature accuracy.",
+      "Managed database schema design, version-controlled migrations, and API versioning to support scalable feature delivery.",
+    ],
   },
 ];
 
 export const projects: ProjectItem[] = [
   {
-    id: "placeholder-1",
-    name: "[ADD: Project name]",
-    summary: "[ADD: One-line summary of what the project does]",
-    problem: "[ADD: The problem this project addresses]",
-    role: "[ADD: Your role — e.g. Solo developer / Backend contributor]",
-    tech: ["[ADD: Tech 1]", "[ADD: Tech 2]", "[ADD: Tech 3]"],
+    id: "isteel",
+    name: "ISTEEL — Dealer Management Application",
+    summary:
+      "ASP.NET Core dealer management platform with SAP and PostgreSQL for onboarding, orders, payments, and operations.",
+    problem:
+      "Dealers needed a reliable system for onboarding, order placement, payments, and day-to-day business operations tied into SAP.",
+    role: "Software Engineer — backend development and enhancement",
+    tech: ["ASP.NET Core", "PostgreSQL", "SAP integration", "REST APIs"],
     features: [
-      "[ADD: Key feature 1]",
-      "[ADD: Key feature 2]",
-      "[ADD: Key feature 3]",
+      "Dealer onboarding workflows",
+      "Order placement and payment workflows",
+      "SAP-integrated business operations support",
     ],
-    githubUrl: undefined,
-    liveUrl: undefined,
-    isPlaceholder: true,
   },
   {
-    id: "placeholder-2",
-    name: "[ADD: Project name]",
-    summary: "[ADD: One-line summary of what the project does]",
-    problem: "[ADD: The problem this project addresses]",
-    role: "[ADD: Your role]",
-    tech: ["[ADD: Tech 1]", "[ADD: Tech 2]"],
-    features: ["[ADD: Key feature 1]", "[ADD: Key feature 2]"],
-    githubUrl: undefined,
-    liveUrl: undefined,
-    isPlaceholder: true,
+    id: "auction",
+    name: "Online Auction Platform",
+    summary:
+      "Scalable ASP.NET Core and MySQL backend for high-traffic auction operations with real-time bidding.",
+    problem:
+      "Auction operations needed secure auth, real-time bidding, payments, and watchlists under high traffic.",
+    role: "Software Engineer — backend system development",
+    tech: ["ASP.NET Core", "MySQL", "JWT", "Real-time bidding"],
+    features: [
+      "Real-time bidding",
+      "Secure authentication",
+      "Payment processing",
+      "Dynamic watchlists",
+    ],
+  },
+  {
+    id: "senszio",
+    name: "Senszio — Tailoring Management Application",
+    summary:
+      "Backend enhancements for a tailoring management application using .NET Core, PostgreSQL, and Dapper.",
+    problem:
+      "Existing workflow modules and APIs needed bug fixes, clearer workflows, and better async performance.",
+    role: "Software Engineer — backend features, bug fixes, API optimization",
+    tech: [".NET Core 3.1", "PostgreSQL", "Dapper", "Async/Await"],
+    features: [
+      "Enhanced backend workflow modules",
+      "Bug resolution and maintenance",
+      "API optimization with async/await",
+    ],
+  },
+  {
+    id: "employee-api",
+    name: "Employee Management API",
+    summary:
+      "ASP.NET Core Web API for employee and department management with JWT authentication and SQL Server.",
+    problem:
+      "Needed a structured API for employee/department CRUD, auth, and consistent error handling.",
+    role: "Developer — API design and implementation",
+    tech: ["C#", "ASP.NET Core", "JWT", "SQL Server", "Dapper", ".NET 8"],
+    features: [
+      "Auth (register/login) with JWT",
+      "Employee and department endpoints",
+      "Paged results and DTO layer",
+      "Exception middleware and authorization handling",
+    ],
+    githubUrl: "https://github.com/UdhayasankarV/Employee-Management-API",
   },
 ];
 
@@ -269,8 +354,7 @@ export const aiDevelopment = {
 export const contact = {
   heading: "Contact",
   intro:
-    "Open to conversations about software engineering roles, collaborations, and interesting problems. Reach out by email or connect on GitHub and LinkedIn.",
-  /** Optional Formspree endpoint — leave empty to use mailto only */
+    "Open to conversations about software engineering roles, collaborations, and interesting problems. Reach out by email, phone, or connect on GitHub and LinkedIn.",
   formspreeEndpointEnv: "VITE_FORMSPREE_ENDPOINT",
 };
 
@@ -302,7 +386,7 @@ export const heroCodeCard = {
     name: profile.name,
     role: profile.role,
     location: profile.location,
-    stack: ["C#", "ASP.NET Core", "SQL Server", "PostgreSQL"],
+    stack: ["C#", ".NET 8", "ASP.NET Core", "PostgreSQL", "SQL Server"],
   },
 };
 
@@ -311,14 +395,10 @@ export const footer = {
 };
 
 /**
- * PLACEHOLDER INDEX (fill these, then remove [ADD:] markers)
- * ----------------------------------------------------------
- * siteMeta.canonicalUrl — your live domain
- * skills[languages] — JS/TS/React if applicable
- * skills[api] — authentication details if applicable
- * skills[tools] — other tools
- * experience[0] — company, role, duration, location, 3–5 bullets
- * projects[0], projects[1] — (and add 3rd/4th if needed) full case-study fields
+ * Remaining placeholders
+ * ---------------------
+ * siteMeta.canonicalUrl — set after Vercel gives you a live URL
+ * Also update index.html, public/robots.txt, public/sitemap.xml
  * Optional: profile.availableForOpportunities = true
- * Optional: VITE_FORMSPREE_ENDPOINT in .env for contact form
+ * Optional: VITE_FORMSPREE_ENDPOINT for on-site contact form
  */

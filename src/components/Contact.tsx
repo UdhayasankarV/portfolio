@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Download, Github, Linkedin, Mail, Send } from "lucide-react";
+import { Download, Github, Linkedin, Mail, Phone, Send } from "lucide-react";
 import { contact, profile, socialLinks } from "@/data/content";
 import { Button } from "./ui/Button";
 import { Reveal } from "./ui/Reveal";
@@ -48,6 +48,20 @@ export function Contact() {
         <Reveal>
           <div className="space-y-4">
             <ul className="space-y-3">
+              <li>
+                <a
+                  href={profile.phoneHref}
+                  className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 transition hover:border-[color-mix(in_oklab,var(--accent)_35%,var(--border))]"
+                >
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--surface-2)] text-[var(--accent)]">
+                    <Phone size={16} aria-hidden />
+                  </span>
+                  <span>
+                    <span className="block font-medium text-[var(--fg)]">Phone</span>
+                    <span className="block text-sm text-[var(--muted)]">{profile.phone}</span>
+                  </span>
+                </a>
+              </li>
               {socialLinks.map((link) => {
                 const Icon = iconMap[link.icon];
                 return (
