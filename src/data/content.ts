@@ -90,11 +90,10 @@ export const navItems: NavItem[] = [
 export const about = {
   heading: "About",
   tagline: "Software Engineer | Building Ideas into Software",
-  greeting: "Hey!",
-  waveEmoji: "👋",
   body: [
-    "I'm a Software Engineer who enjoys turning ideas into practical software solutions. I love exploring technology, solving challenging problems, and building applications that make a difference.",
-    "Always learning, experimenting, and creating — with a little help from AI-powered development along the way.",
+    "I build and maintain applications with C#, .NET, and ASP.NET Core Web API. My work covers REST APIs, database design with PostgreSQL, SQL Server and MySQL, JWT authentication, integrations, and day-to-day debugging and performance troubleshooting.",
+    "At Aetram Infotech I work on trading technology components integrated with MetaTrader 5, including Dynamic Leverage and related backend modules. Earlier at Hakuna Matata Solutions I contributed to dealer management, auction, and tailoring platforms.",
+    "I use AI-assisted development in my daily workflow — especially Cursor — with deliberate prompts, careful review, and ownership of every change that ships.",
   ],
   education: {
     degree: "Bachelor of Engineering (Electronics & Communication)",

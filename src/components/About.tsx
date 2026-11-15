@@ -11,19 +11,8 @@ export function About() {
             <p className="font-display text-lg font-semibold text-[var(--fg)] sm:text-xl">
               {about.tagline}
             </p>
-            <p className="text-[var(--fg)]">
-              {about.greeting}{" "}
-              <span
-                className="inline-block brightness-0 invert"
-                aria-hidden
-                title="wave"
-              >
-                {about.waveEmoji}
-              </span>{" "}
-              {about.body[0]}
-            </p>
-            {about.body.slice(1).map((paragraph) => (
-              <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+            {about.body.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
             ))}
             <p>
               Based in <span className="text-[var(--fg)]">{profile.location}</span>.
