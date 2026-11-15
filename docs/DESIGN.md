@@ -6,7 +6,7 @@
 - **Role:** Software Engineer (broad; not limited to backend)
 - **Location:** Salem, India
 - **Focus:** C# / ASP.NET Core Web API, SQL Server & PostgreSQL, REST APIs, debugging, AI-assisted development with Cursor
-- **Links:** GitHub (`vudhayasankar`), LinkedIn, email, resume PDF
+- **Links:** GitHub (`UdhayasankarV`), LinkedIn, email, resume PDF
 
 Content that is not yet provided (experience bullets, projects, optional skills) lives as clearly marked `[ADD: …]` placeholders in `src/data/content.ts`.
 

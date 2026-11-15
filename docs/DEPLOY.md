@@ -41,14 +41,14 @@ If `portfolio` is taken:
 gh repo create udhayasankar-portfolio --public --source=. --remote=origin --push
 ```
 
-Repo URL will look like: `https://github.com/vudhayasankar/portfolio`
+Repo URL will look like: `https://github.com/UdhayasankarV/portfolio`
 
 ## C. Deploy on Vercel
 
 ### Option 1 — Vercel Dashboard (recommended)
 
 1. Go to [https://vercel.com/signup](https://vercel.com/signup) and sign in with **GitHub**.
-2. **Add New… → Project** → import `vudhayasankar/portfolio` (or `udhayasankar-portfolio`).
+2. **Add New… → Project** → import `UdhayasankarV/portfolio` (or `udhayasankar-portfolio`).
 3. Framework preset: **Vite**
 4. Build command: `npm run build`
 5. Output directory: `dist`

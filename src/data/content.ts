@@ -65,7 +65,7 @@ export const profile = {
   role: "Software Engineer",
   location: "Salem, India",
   email: "udhayasanklar2002@gmail.com",
-  githubUrl: "https://github.com/vudhayasankar",
+  githubUrl: "https://github.com/UdhayasankarV",
   linkedinUrl: "https://www.linkedin.com/in/udhayasankar-v-11a126211/",
   resumePath: "/resume.pdf",
   photoPath: "/images/profile.jpg",
