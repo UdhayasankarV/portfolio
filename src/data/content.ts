@@ -236,6 +236,51 @@ export const experience: ExperienceItem[] = [
 
 export const projects: ProjectItem[] = [
   {
+    id: "dynamic-leverage",
+    name: "Dynamic Leverage",
+    summary:
+      "Trading backend module that evaluates open positions, applies account leverage rules, and supports margin-related updates through MetaTrader 5 integration.",
+    problem:
+      "Leverage and margin updates needed reliable rule evaluation across multiple symbols and positions with clear diagnostics.",
+    role: "Software Engineer — backend development (.NET stack)",
+    tech: [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "ASP.NET Core Web API",
+      "MetaTrader 5 (MT5)",
+      "Async/Await",
+    ],
+    features: [
+      "Open-position evaluation and leverage rule application",
+      "Margin-related updates via MT5 integration",
+      "Validation, diagnostics, and logging for trading calculations",
+      "Performance work for multi-symbol and multi-position scenarios",
+    ],
+  },
+  {
+    id: "monitoring-app",
+    name: "Monitoring Application",
+    summary:
+      "Monitoring application built with ASP.NET Core Web API, MVC, and SQL Server for operational visibility and backend workflows.",
+    problem:
+      "Needed a .NET-based application to monitor and manage operational data through API and MVC layers backed by SQL Server.",
+    role: "Software Engineer — API and application development",
+    tech: [
+      "ASP.NET Core Web API 10",
+      "ASP.NET Core MVC",
+      "C#",
+      "SQL Server",
+      ".NET",
+    ],
+    features: [
+      "ASP.NET Core Web API 10 backend services",
+      "MVC application layer for UI workflows",
+      "SQL Server data storage and queries",
+      "Integrated API and MVC architecture",
+    ],
+  },
+  {
     id: "isteel",
     name: "ISTEEL — Dealer Management Application",
     summary:
@@ -280,23 +325,6 @@ export const projects: ProjectItem[] = [
       "Bug resolution and maintenance",
       "API optimization with async/await",
     ],
-  },
-  {
-    id: "employee-api",
-    name: "Employee Management API",
-    summary:
-      "ASP.NET Core Web API for employee and department management with JWT authentication and SQL Server.",
-    problem:
-      "Needed a structured API for employee/department CRUD, auth, and consistent error handling.",
-    role: "Developer — API design and implementation",
-    tech: ["C#", "ASP.NET Core", "JWT", "SQL Server", "Dapper", ".NET 8"],
-    features: [
-      "Auth (register/login) with JWT",
-      "Employee and department endpoints",
-      "Paged results and DTO layer",
-      "Exception middleware and authorization handling",
-    ],
-    githubUrl: "https://github.com/UdhayasankarV/Employee-Management-API",
   },
 ];
 
