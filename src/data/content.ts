@@ -382,17 +382,6 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
-export const heroCodeCard = {
-  method: "GET",
-  path: "/api/engineer",
-  response: {
-    name: profile.name,
-    role: profile.role,
-    location: profile.location,
-    stack: ["C#", ".NET 8", "ASP.NET Core", "PostgreSQL", "SQL Server"],
-  },
-};
-
 export const footer = {
   note: "Built with care — Engineer’s Workbench.",
 };

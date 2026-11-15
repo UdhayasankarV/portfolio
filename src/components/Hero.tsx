@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, MapPin } from "lucide-react";
-import { heroCodeCard, profile } from "@/data/content";
+import { profile } from "@/data/content";
 import { Button } from "./ui/Button";
 
 export function Hero() {
@@ -99,7 +99,7 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-md pb-4 lg:mx-0 lg:justify-self-end lg:pb-8"
+          className="relative mx-auto w-full max-w-md lg:mx-0 lg:justify-self-end"
           initial={reduce ? false : { opacity: 0, x: 24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -121,16 +121,6 @@ export function Hero() {
                 className="aspect-square h-auto w-full object-cover"
               />
             </div>
-          </div>
-
-          <div className="relative z-10 mx-auto mt-4 w-full max-w-[18.5rem] rounded-2xl border border-[var(--border)] bg-[color-mix(in_oklab,var(--surface)_92%,transparent)] p-4 font-mono text-[11px] leading-relaxed shadow-xl backdrop-blur sm:absolute sm:-bottom-6 sm:-left-8 sm:mx-0 sm:mt-0 sm:w-72 sm:text-xs">
-            <div className="mb-2 flex items-center gap-2 text-[var(--muted)]">
-              <span className="text-[var(--accent-2)]">{heroCodeCard.method}</span>
-              <span>{heroCodeCard.path}</span>
-            </div>
-            <pre className="overflow-x-auto text-[var(--fg)]">
-              <code>{JSON.stringify(heroCodeCard.response, null, 2)}</code>
-            </pre>
           </div>
         </motion.div>
       </div>
