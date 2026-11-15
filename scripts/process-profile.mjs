@@ -8,10 +8,10 @@ const meta = await sharp(source).metadata();
 const w = meta.width ?? 1024;
 const h = meta.height ?? 1024;
 
-// Cut bottom-right watermark: tighter crop shifted up and left
-const side = Math.floor(Math.min(w, h) * 0.76);
-const left = Math.floor((w - side) * 0.28);
-const top = Math.floor((h - side) * 0.1);
+// Aggressive cut of bottom-right watermark zone; keep face centered
+const side = Math.floor(Math.min(w, h) * 0.68);
+const left = Math.floor((w - side) * 0.32);
+const top = Math.floor((h - side) * 0.06);
 
 await sharp(source)
   .extract({ left, top, width: side, height: side })
@@ -19,4 +19,4 @@ await sharp(source)
   .jpeg({ quality: 90, mozjpeg: true })
   .toFile("public/images/profile.jpg");
 
-console.log("Cropped profile (watermark zone removed)", { w, h, side, left, top });
+console.log("Cropped profile (watermark removed)", { w, h, side, left, top });
