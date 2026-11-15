@@ -72,7 +72,18 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.18 }}
           >
-            {profile.shortIntro}
+            {profile.shortIntro.split("👋").map((part, i, arr) =>
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <span className="inline-block brightness-0 invert" aria-hidden>
+                    👋
+                  </span>
+                </span>
+              ) : (
+                <span key={i}>{part}</span>
+              ),
+            )}
           </motion.p>
 
           {profile.availableForOpportunities ? (

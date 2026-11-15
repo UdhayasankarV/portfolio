@@ -75,7 +75,7 @@ export const profile = {
   /** Set to true only when you want the status chip shown in the hero */
   availableForOpportunities: false,
   shortIntro:
-    "Software Engineer with experience in C#, .NET, and ASP.NET Core Web API. I design databases, build REST APIs, and integrate systems — including MetaTrader 5 trading components. I use Cursor daily with deliberate prompts and careful review.",
+    "Hey! 👋 I'm a Software Engineer who enjoys turning ideas into practical software solutions. I love exploring technology, solving challenging problems, and building applications that make a difference.",
 };
 
 export const navItems: NavItem[] = [
