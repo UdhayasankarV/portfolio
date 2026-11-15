@@ -8,30 +8,28 @@ const meta = await sharp(source).metadata();
 const w = meta.width ?? 1024;
 const h = meta.height ?? 1024;
 
-// Cover star + text using nearby blazer/wall pixels (not a flat grey box)
-const coverW = Math.floor(w * 0.24);
-const coverH = Math.floor(h * 0.16);
-const left = w - coverW - 4;
-const top = h - coverH - 4;
+const coverW = Math.floor(w * 0.22);
+const coverH = Math.floor(h * 0.14);
+const left = w - coverW;
+const top = h - coverH;
 
+// Stronger opaque cover from nearby blazer, soft only on inner edge
 const donor = await sharp(source)
   .extract({
-    left: Math.max(0, left - coverW),
-    top: Math.max(0, top - Math.floor(coverH * 0.35)),
+    left: Math.max(0, left - Math.floor(coverW * 0.9)),
+    top: Math.max(0, top - Math.floor(coverH * 0.5)),
     width: coverW,
     height: coverH,
   })
-  .blur(28)
-  .modulate({ brightness: 1.02 })
+  .blur(32)
   .toBuffer();
 
-// Soft-edge mask so the patch blends
 const mask = Buffer.from(`
 <svg width="${coverW}" height="${coverH}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="g" x1="100%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="white" stop-opacity="1"/>
-      <stop offset="55%" stop-color="white" stop-opacity="1"/>
+      <stop offset="70%" stop-color="white" stop-opacity="1"/>
       <stop offset="100%" stop-color="white" stop-opacity="0"/>
     </linearGradient>
   </defs>
@@ -39,14 +37,19 @@ const mask = Buffer.from(`
 </svg>
 `);
 
-const maskedPatch = await sharp(donor)
-  .composite([{ input: mask, blend: "dest-in" }])
+const patch = await sharp(donor)
+  .ensureAlpha()
+  .composite([{ input: await sharp(mask).ensureAlpha().toBuffer(), blend: "dest-in" }])
   .png()
   .toBuffer();
 
+// Apply twice for denser cover of the bright watermark
 await sharp(source)
-  .composite([{ input: maskedPatch, left, top, blend: "over" }])
+  .composite([
+    { input: patch, left, top, blend: "over" },
+    { input: patch, left, top, blend: "over" },
+  ])
   .jpeg({ quality: 92, mozjpeg: true })
   .toFile("public/images/profile.jpg");
 
-console.log("Watermark covered with blended donor patch", { coverW, coverH, left, top });
+console.log("Watermark strongly covered", { coverW, coverH, left, top });
