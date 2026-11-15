@@ -111,19 +111,14 @@ export function Hero() {
             />
             <div className="relative overflow-hidden rounded-[1.35rem] border border-[var(--border)] bg-[var(--surface)] shadow-[0_24px_80px_rgb(0_0_0_/0.28)]">
               <img
-                src={profile.photoPath}
+                src={`${profile.photoPath}?v=2`}
                 alt={profile.photoAlt}
                 width={640}
                 height={640}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="aspect-square h-auto w-full object-cover"
-              />
-              {/* Hide remaining watermark corner on screen */}
-              <div
-                className="pointer-events-none absolute bottom-0 right-0 h-[14%] w-[22%] rounded-tl-3xl bg-gradient-to-tl from-[#1e2736] from-10% via-[#243044]/70 to-transparent"
-                aria-hidden
+                className="aspect-square h-auto w-full scale-[1.12] object-cover object-[42%_28%]"
               />
             </div>
           </div>
