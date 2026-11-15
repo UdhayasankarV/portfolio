@@ -109,16 +109,16 @@ export function Hero() {
               className="absolute -inset-2 rounded-[1.75rem] border border-[color-mix(in_oklab,var(--accent)_55%,transparent)] sm:-inset-4"
               aria-hidden
             />
-            <div className="relative overflow-hidden rounded-[1.35rem] border border-[var(--border)] bg-[var(--surface)] shadow-[0_24px_80px_rgb(0_0_0_/0.28)]">
+            <div className="overflow-hidden rounded-[1.35rem] border border-[var(--border)] bg-[var(--surface)] shadow-[0_24px_80px_rgb(0_0_0_/0.28)]">
               <img
-                src={`${profile.photoPath}?v=2`}
+                src={profile.photoPath}
                 alt={profile.photoAlt}
                 width={640}
                 height={640}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="aspect-square h-auto w-full scale-[1.12] object-cover object-[42%_28%]"
+                className="aspect-square h-auto w-full object-cover"
               />
             </div>
           </div>
