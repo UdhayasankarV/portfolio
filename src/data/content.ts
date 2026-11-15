@@ -52,7 +52,7 @@ export type SocialLink = {
 export const siteMeta = {
   title: "Udhayasankar V — Software Engineer",
   description:
-    "Software Engineer with experience in C#, ASP.NET Core, REST APIs, PostgreSQL, SQL Server, and MySQL. Based in Salem, India. Currently building trading technology components with MetaTrader 5 integration.",
+    "Software Engineer with experience in C#, ASP.NET Core, REST APIs, PostgreSQL, SQL Server, and MySQL. Based in Chennai, India. Currently building trading technology components with MetaTrader 5 integration.",
   canonicalUrl: "https://[ADD: your-vercel-or-custom-domain]",
   ogImage: "/images/profile.jpg",
   author: "Udhayasankar V",
@@ -63,7 +63,7 @@ export const profile = {
   name: "Udhayasankar V",
   firstName: "Udhayasankar",
   role: "Software Engineer",
-  location: "Salem, India",
+  location: "Chennai, India",
   email: "udhayasankar2002@gmail.com",
   phone: "+91 84890 03502",
   phoneHref: "tel:+918489003502",
@@ -355,6 +355,9 @@ export const contact = {
   heading: "Contact",
   intro:
     "Open to conversations about software engineering roles, collaborations, and interesting problems. Reach out by email, phone, or connect on GitHub and LinkedIn.",
+  mailtoCardTitle: "Send a message",
+  mailtoCardBody:
+    "The fastest way to reach me is email. Use the button below and I’ll get back to you as soon as I can.",
   formspreeEndpointEnv: "VITE_FORMSPREE_ENDPOINT",
 };
 

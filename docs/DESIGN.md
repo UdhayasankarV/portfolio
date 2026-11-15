@@ -4,7 +4,7 @@
 
 - **Name:** Udhayasankar V
 - **Role:** Software Engineer (broad; not limited to backend)
-- **Location:** Salem, India
+- **Location:** Chennai, India
 - **Focus:** C# / ASP.NET Core Web API, SQL Server & PostgreSQL, REST APIs, debugging, AI-assisted development with Cursor
 - **Links:** GitHub (`UdhayasankarV`), LinkedIn, email, resume PDF
 

@@ -151,13 +151,9 @@ export function Contact() {
           ) : (
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
               <p className="font-display text-xl font-semibold text-[var(--fg)]">
-                Prefer email?
+                {contact.mailtoCardTitle}
               </p>
-              <p className="mt-3 text-[var(--muted)]">
-                Use the button below to open your mail client. To enable an on-site form later,
-                set <code className="font-mono text-[var(--accent)]">VITE_FORMSPREE_ENDPOINT</code>{" "}
-                in your environment.
-              </p>
+              <p className="mt-3 text-[var(--muted)]">{contact.mailtoCardBody}</p>
               <div className="mt-6">
                 <Button href={`mailto:${profile.email}?subject=Hello%20from%20your%20portfolio`}>
                   <Mail size={16} aria-hidden />

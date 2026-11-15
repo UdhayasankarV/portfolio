@@ -9,7 +9,7 @@ export function Footer() {
           © {year} {profile.name}. {footer.note}
         </p>
         <p className="font-mono text-xs text-[var(--muted)]">
-          Salem, India · C# · ASP.NET Core · SQL
+          Chennai, India · C# · ASP.NET Core · SQL
         </p>
       </div>
     </footer>

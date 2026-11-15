@@ -1,6 +1,6 @@
 # Udhayasankar V — Portfolio
 
-Personal portfolio for **Udhayasankar V**, Software Engineer (Salem, India). Dark “Engineer’s Workbench” aesthetic with a light theme toggle, content-driven sections, and a GitHub → Vercel deploy path.
+Personal portfolio for **Udhayasankar V**, Software Engineer (Chennai, India). Dark “Engineer’s Workbench” aesthetic with a light theme toggle, content-driven sections, and a GitHub → Vercel deploy path.
 
 ## Tech stack
 
