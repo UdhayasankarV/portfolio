@@ -99,26 +99,30 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-md lg:mx-0 lg:justify-self-end"
+          className="relative mx-auto w-full max-w-sm lg:mx-0 lg:max-w-md lg:justify-self-end"
           initial={reduce ? false : { opacity: 0, x: 24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <div className="relative ml-2 mt-2 sm:ml-6 sm:mt-6">
+          <div className="relative mx-auto w-[min(100%,22rem)] sm:w-[min(100%,24rem)]">
             <div
-              className="absolute -inset-2 rounded-[1.75rem] border border-[color-mix(in_oklab,var(--accent)_55%,transparent)] sm:-inset-4"
+              className="absolute -inset-2 rounded-full border border-[color-mix(in_oklab,var(--accent)_60%,transparent)] sm:-inset-3"
               aria-hidden
             />
-            <div className="overflow-hidden rounded-[1.35rem] border border-[var(--border)] bg-[var(--surface)] shadow-[0_24px_80px_rgb(0_0_0_/0.28)]">
+            <div
+              className="absolute -inset-5 rounded-full border border-[color-mix(in_oklab,var(--accent)_18%,transparent)] sm:-inset-6"
+              aria-hidden
+            />
+            <div className="overflow-hidden rounded-full border border-[var(--border)] bg-[var(--surface)] shadow-[0_24px_80px_rgb(0_0_0_/0.28)]">
               <img
                 src={profile.photoPath}
                 alt={profile.photoAlt}
-                width={640}
-                height={640}
+                width={900}
+                height={900}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="aspect-square h-auto w-full object-cover"
+                className="aspect-square h-auto w-full scale-105 object-cover object-[center_18%]"
               />
             </div>
           </div>
