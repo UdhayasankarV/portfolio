@@ -120,9 +120,9 @@ export function Hero() {
                 fetchPriority="high"
                 className="aspect-square h-auto w-full object-cover"
               />
-              {/* Extra soft cover for watermark corner on display */}
+              {/* Soft display cover for any leftover mark */}
               <div
-                className="pointer-events-none absolute bottom-0 right-0 h-[20%] w-[28%] bg-gradient-to-tl from-[#cfcdd0] from-15% via-[#cfcdd0]/80 to-transparent"
+                className="pointer-events-none absolute bottom-0 right-0 h-[16%] w-[24%] bg-gradient-to-tl from-[#2a3344]/55 via-[#2a3344]/25 to-transparent mix-blend-normal"
                 aria-hidden
               />
             </div>
