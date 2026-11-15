@@ -89,10 +89,12 @@ export const navItems: NavItem[] = [
 
 export const about = {
   heading: "About",
+  tagline: "Software Engineer | Building Ideas into Software",
+  greeting: "Hey!",
+  waveEmoji: "👋",
   body: [
-    "Software Engineer with experience in C#, .NET, ASP.NET Core, ASP.NET Core Web API, Entity Framework Core, Dapper, PostgreSQL, MySQL, and SQL Server. I work on RESTful API development, database design and query optimization, JWT authentication, business-rule implementation, third-party integrations, asynchronous programming, production support, and performance troubleshooting.",
-    "I currently develop trading technology components integrated with MetaTrader 5 (MT5), including Dynamic Leverage and Swap Engine modules. Earlier work covered dealer and order management, SAP integration, online auction systems, real-time bidding, payment workflows, and tailoring applications.",
-    "I use AI-assisted development in my daily workflow, with deliberate prompt design and advanced use of Cursor AI for coding, debugging, code analysis and productivity.",
+    "I'm a Software Engineer who enjoys turning ideas into practical software solutions. I love exploring technology, solving challenging problems, and building applications that make a difference.",
+    "Always learning, experimenting, and creating — with a little help from AI-powered development along the way.",
   ],
   education: {
     degree: "Bachelor of Engineering (Electronics & Communication)",
