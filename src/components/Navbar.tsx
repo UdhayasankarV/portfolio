@@ -62,6 +62,11 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
               <li key={item.id}>
                 <a
                   href={item.href}
+                  onClick={() => {
+                    // Immediate feedback while smooth-scroll settles
+                    window.history.replaceState(null, "", item.href);
+                    window.dispatchEvent(new HashChangeEvent("hashchange"));
+                  }}
                   className={cn(
                     "relative rounded-full px-3 py-2 text-sm transition",
                     active ? "text-[var(--fg)]" : "text-[var(--muted)] hover:text-[var(--fg)]",
@@ -122,7 +127,11 @@ export function Navbar({ theme, onToggleTheme }: NavbarProps) {
                 <a
                   key={item.id}
                   href={item.href}
-                  onClick={close}
+                  onClick={() => {
+                    window.history.replaceState(null, "", item.href);
+                    window.dispatchEvent(new HashChangeEvent("hashchange"));
+                    close();
+                  }}
                   className={cn(
                     "rounded-2xl px-4 py-3 text-lg font-medium",
                     activeId === item.id
